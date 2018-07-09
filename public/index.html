@@ -3,14 +3,15 @@
   <head>
     <title>Image Slider</title>
     <link ref= "stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
+   
+   <style type="text/css">
       img{
         display: flex;
         margin: auto;
         width: 69.5%;
         height: 500px;
       }
-      #slider{
+      #Slider{
         width: 1000px;
         height: 500px;
         margin: 20px auto;
@@ -18,22 +19,26 @@
         border: 20px solid white;
         box-shadow: 0px 0px 5px 2px #ccc;
       }
-      button{
+      i {
+        display: flex;
+        margin-left: 15%;
         padding: 20px;
         border: none;
-        background: green;
+        background: blue;
         font-size: 20px;
         color: white ;
         position: absolute;
-        top: 25%;
+        top: 30%;
         cursor: pointer;
       }
-      .next{
+      .next {
+        display: flex;
+        margin-left: 68%;
         border-radius: 10px 0px 0px 10px;
-        margin-left: 81.9%;
       }
-      .prew{
-        margin-left: 15.3%;
+      .prew {
+        display: flex;
+        margin-left: -1.3%;
         border-radius: 0px 10px 10px 0px;
       }
     </style>
@@ -41,17 +46,16 @@
   <body>
     <div id="Slider">
       <div id="box">
-        <img src="a.jpg">
+        <img src="../public/pic.jpg/">
       </div>
-      <button class="prew fa fa-chevron-left" onclick="prewImage()"></button>
-      <button class="next fa fa-chevron-right" onclick="nextImage()"></button>
+      <i class="prew fa fa-chevron-left" onclick="prewImage()"></i>
+      <i class="next fa fa-chevron-right" onclick="nextImage()"></i>
     </div>
-
 
 <script type="text/javascript">
 
   let slider_content = document.getElementById('box');
-  let image = ['a','b', 'c', 'd','e'];
+  let image = ['a','b','c', 'd','e'];
   let i = image.length;
 
   function nextImage(){
@@ -60,16 +64,16 @@
     }else {
       i = 1;
     }
-      slider_content.innerHTML = "img = src"+img[i-1]+".jpg>;
+      slider_content.innerHTML = "img src="+image[i-1]+".jpg>";
   }
 
   function prewImage(){
     if (i > image.length+1 && i>1){
         i = i-1;
     }else {
-      i = 1;
+      i = image.length;
     }
-      slider_content.innerHTML = "img = src"+img[i-1]+".jpg>;
+      slider_content.innerHTML = "img src="+image[i-1]+".jpg>";
   }
 
 setInterval(nextImage, 6000);

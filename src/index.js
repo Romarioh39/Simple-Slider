@@ -1,8 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import CSSModules from 'react-css-modules'
+// import React, { Component } from 'react'
+// import css from './index.css'
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+// class Modal extends Component {
+//   render() {
+//     return (
+//       <div> hi </div>
+//     )
+//   }
+// }
+
+// export default CSSModules(Modal, css)
